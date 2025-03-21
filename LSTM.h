@@ -4,6 +4,8 @@
 #include <cmath>
 #include <unordered_map>
 
+using namespace std;
+
 extern double longTermMemory /* cell state */,
 	shortTermMemory; /* Hidden state */
 
