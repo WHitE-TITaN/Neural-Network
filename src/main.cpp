@@ -1,4 +1,4 @@
-#include "transformer.h"
+#include "../headers/transformer.h"
 
 int main() {
 	transformer sol;
