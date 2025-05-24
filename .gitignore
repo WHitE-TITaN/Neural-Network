@@ -1,6 +1,8 @@
 # Ignore the downloaded GPT-2 model directory
 gpt2-offline/
 build/
+LLaMA/
+
 
 # Ignore large ONNX model files
 *.onnx
