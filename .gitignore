@@ -2,7 +2,7 @@
 gpt2-offline/
 build/
 LLaMA/
-
+headers/tinyllama.gguf
 
 # Ignore large ONNX model files
 *.onnx
