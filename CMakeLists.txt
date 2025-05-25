@@ -7,11 +7,16 @@ project(NeuralNetwork)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 
+
 #Add Executables
 add_executable(NeuralNetwork
     src/main.cpp
 )
 
+
+target_include_directories(NeuralNetwork PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/LLaMA/llama.cpp
+)
 
 include_directories(headers)
 include_directories(LLaMA/llama.cpp/include)
@@ -20,3 +25,4 @@ include_directories(LLaMa/llama.cpp)
 add_subdirectory(LLaMa/llama.cpp)
 
 target_link_libraries(NeuralNetwork PRIVATE llama)
+
