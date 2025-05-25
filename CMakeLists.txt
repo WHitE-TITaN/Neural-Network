@@ -10,8 +10,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED true)
 #Add Executables
 add_executable(NeuralNetwork
     src/main.cpp
-    headers/mainCode/wordEmbedding.cpp
 )
 
 
 include_directories(headers)
+include_directories(LLaMA/llama.cpp/include)
+include_directories(LLaMa/llama.cpp)
+
+add_subdirectory(LLaMa/llama.cpp)
+
+target_link_libraries(NeuralNetwork PRIVATE llama)
