@@ -5,7 +5,7 @@
 #include <string>
 
 std::string runPythonScript(const std::string& scriptPath) {
-    std::string command = "python3 " + scriptPath + " 2>&1"; // Redirect stderr to stdout
+    std::string command = "python " + scriptPath + " 2>&1"; // Redirect stderr to stdout
     std::string result;
     char buffer[128];
 
