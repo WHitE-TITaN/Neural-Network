@@ -1,4 +1,5 @@
 #include "llama.h"
+#include "..\headers\mainCode\webSearchingResult.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -15,6 +16,9 @@
 */
 
 int main() {
+    std::string outofSearch = runPythonScript("../webSurfing/search.py");
+    std::cout<<outofSearch;
+
     llama_backend_init();  // required
 
     // Load model
