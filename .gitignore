@@ -6,6 +6,7 @@ headers/tinyllama.gguf
 
 # Ignore large ONNX model files
 *.onnx
+*.google-cookie
 
 # Ignore TensorFlow and PyTorch model weight files
 *.tflite
