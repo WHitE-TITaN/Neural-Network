@@ -55,6 +55,11 @@ If your program says `Unable to find llama.dll`, you’ll need to:
 > 💡 `-DLLAMA_CURL=OFF` is essential—it prevents extra dependencies like `curl`, `llava`, or server modules from being included.
 
 ---
+<h3> Install Python-dev tools</h3>
+
+> For searching and voice input & output module to work it needs to install Python.h header files which is installed with dev tools.
+
+---
 
 ## 🧱 Building the Project
 
