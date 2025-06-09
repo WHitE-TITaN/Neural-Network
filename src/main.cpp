@@ -1,5 +1,6 @@
 #include "llama.h"
-#include "..\headers\mainCode\webSearchingResult.h"
+#include "..\headers\webFeatch\webSearchingResult.h"
+#include "..\headers\model.h"
 #include <iostream>
 #include <string>
 #include <vector>
