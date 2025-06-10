@@ -16,11 +16,11 @@ add_executable(NeuralNetwork
 
 target_include_directories(NeuralNetwork PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/LLaMA/llama.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/LLaMA/llama.cpp     # llama.h is here
+    ${CMAKE_CURRENT_SOURCE_DIR}/LLaMA/llama.cpp/include  
 )
 
 include_directories(headers)
-include_directories(LLaMA/llama.cpp/include)
-include_directories(LLaMa/llama.cpp)
 
 add_subdirectory(LLaMa/llama.cpp)
 

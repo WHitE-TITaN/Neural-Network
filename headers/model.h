@@ -53,15 +53,15 @@ class assistant{
         }
 
 
-        std::string promptInput(){
-            std::cout<<"Ask Any Thing";
+        void promptInput(){
             std::getline(std::cin, prompt);
-            std::vector<llama_token> prompt_tokens(prompt.size() + 16);
+            prompt = "user: " + prompt + "\nAssistant: ";
+            prompt_tokens.resize(prompt.size() + 16);
         }
 
 
-        std::vector<char[128]> generateOutput(){
-            std::vector<char[128]> result;
+        std::vector<std::string> generateOutput(){
+            std::vector<std::string> result;
             
             int n_tokens = llama_tokenize(
                 vocab,
@@ -103,8 +103,8 @@ class assistant{
 
                 if (n > 0) {
                     piece[n] = '\0'; // ensure null-termination
-                    result.push_back(piece);
-                    //std::cout << piece << std::flush;
+                    //result.push_back(std::string(piece));
+                    std::cout << piece << std::flush;
                 } else {
                     std::cerr << "[WARN] Failed to decode token: " << token << "\n";
                 }
@@ -115,6 +115,7 @@ class assistant{
             }
 
             llama_sampler_free(sampler);
+            return result;
         }
 
         ~assistant(){
