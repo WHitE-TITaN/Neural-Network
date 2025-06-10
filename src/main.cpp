@@ -20,15 +20,10 @@ int main() {
     //std::string outofSearch = runPythonScript("C:/Users/dk488/Documents/GitHub/Neural-Network/webSurfing/search.py");
     //std::cout<<outofSearch;
 
+    std::cout<<"\n\nUser : ";
     assistant myAssistant;
     myAssistant.promptInput();
-    myAssistant.generateOutput();
+    myAssistant.generateOutput();    
     
     return 0;
 }
-
-
-
-//    LLAMA_API const struct llama_vocab * llama_model_get_vocab(const struct llama_model * model);
-//    LLAMA_API llama_token llama_model_decoder_start_token(const struct llama_model * model);
-    

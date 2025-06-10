@@ -54,7 +54,9 @@ class assistant{
 
 
         void promptInput(){
+            
             std::getline(std::cin, prompt);
+            std::cout<<"\n user :";
             prompt = "user: " + prompt + "\nAssistant: ";
             prompt_tokens.resize(prompt.size() + 16);
         }
@@ -91,7 +93,7 @@ class assistant{
             std::cout << prompt;
 
             llama_token token;
-            for (int i = 0; i < 100; ++i) {
+            for (int i = 0; i < 512; ++i) {
                 token = llama_sampler_sample(sampler, ctx, -1);
 
                 // Break on EOS
