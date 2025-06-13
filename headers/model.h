@@ -56,7 +56,7 @@ class assistant{
         void promptInput(){
             
             std::getline(std::cin, prompt);
-            std::cout<<"\n user :";
+            std::cout<<"\n user : summarize this as well as if any question arrives ans the question and make grouping of the topics related seperated with ^^^ symbol -> ";
             prompt = "user: " + prompt + "\nAssistant: ";
             prompt_tokens.resize(prompt.size() + 16);
         }
