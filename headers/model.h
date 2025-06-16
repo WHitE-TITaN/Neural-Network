@@ -38,7 +38,7 @@ class assistant{
             
             //loading model in
             model_params = llama_model_default_params();
-            model = llama_model_load_from_file("C:/Users/dk488/Downloads/llama-2-7b.Q8_0.gguf", model_params);
+            model = llama_model_load_from_file("C:/Users/dk488/Downloads/llama-2-7b-chat.Q8_0.gguf", model_params);
             if (!model) {
                 std::cerr << "❌ Failed to load model\n";
                 return;
@@ -56,7 +56,7 @@ class assistant{
         void promptInput(){
             
             std::getline(std::cin, prompt);
-            std::cout<<"\n user : summarize this as well as if any question arrives ans the question and make grouping of the topics related seperated with ^^^ symbol -> ";
+            std::cout<<"\n user :";
             prompt = "user: " + prompt + "\nAssistant: ";
             prompt_tokens.resize(prompt.size() + 16);
         }
