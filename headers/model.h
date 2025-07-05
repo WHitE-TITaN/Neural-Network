@@ -38,7 +38,7 @@ class assistant{
             
             //loading model in
             model_params = llama_model_default_params();
-            model = llama_model_load_from_file("C:/Users/dk488/Downloads/llama-2-7b-chat.Q8_0.gguf", model_params);
+            model = llama_model_load_from_file("C:/Users/dk488/Documents/GitHub/Neural-Network/headers/tinyllama.gguf", model_params);
             if (!model) {
                 std::cerr << "❌ Failed to load model\n";
                 return;
